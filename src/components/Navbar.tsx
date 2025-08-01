@@ -3,7 +3,7 @@
 const Navbar = () => {
   return (
     <nav className="w-full py-4 px-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
-      <div className="text-lg font-bold text-yellow-600">Glowsville</div>
+      <div className="text-lg font-bold text-yellow-600">Gloryville</div>
       <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
         <li className="cursor-pointer hover:text-yellow-500">About Us</li>
         <li className="cursor-pointer hover:text-yellow-500">Services</li>

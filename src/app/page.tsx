@@ -1,10 +1,11 @@
-// File: /src/app/page.tsx
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ImpactSection from "@/components/ImpactSection";
 import ExcellenceSection from "@/components/ExcellenceSection";
 import ServicesOverview from "@/components/ServicesOverview";
+import CaseStudySection from "@/components/CaseStudySection";
+import ContactCTA from "@/components/ContactCTA";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,8 @@ export default function HomePage() {
       <ImpactSection />
       <ExcellenceSection />
       <ServicesOverview />
+      <CaseStudySection />
+      <ContactCTA />
     </>
   );
 }
