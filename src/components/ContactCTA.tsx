@@ -16,7 +16,7 @@ const ContactCTA = () => {
         </button>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center gap-8 text-sm mt-6">
+    {/*   <div className="flex flex-col md:flex-row justify-center gap-8 text-sm mt-6">
         <div className="flex items-center gap-2">
           <FaPhoneAlt />
           <span>+234 [Your Number]</span>
@@ -29,7 +29,7 @@ const ContactCTA = () => {
           <FaMapMarkerAlt />
           <span>Lagos, Nigeria</span>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

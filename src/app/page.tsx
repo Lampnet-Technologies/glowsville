@@ -7,6 +7,7 @@ import ServicesOverview from "@/components/ServicesOverview";
 import CaseStudySection from "@/components/CaseStudySection";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
       <CaseStudySection />
       <ContactCTA />
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

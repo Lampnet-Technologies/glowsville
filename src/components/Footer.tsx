@@ -9,7 +9,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
   FaEnvelope,
-  FaClock
+  FaClock,
 } from "react-icons/fa";
 
 const Footer: React.FC = () => {
@@ -104,13 +104,13 @@ const Footer: React.FC = () => {
           <ul className="space-y-3 text-gray-300">
             <li className="flex items-center space-x-2">
               <FaEnvelope className="text-yellow-400" />
-              <a href="mailto:contact@gloryvillesolutions.com">
+              <Link href="mailto:contact@gloryvillesolutions.com">
                 contact@gloryvillesolutions.com
-              </a>
+              </Link>
             </li>
             <li className="flex items-center space-x-2">
               <FaPhone className="text-yellow-400" />
-              <a href="tel:+2340000000000">+234[Your Number]</a>
+              <Link href="tel:+2347013800215">+234 701 380 0215</Link>
             </li>
             <li className="flex items-center space-x-2">
               <FaMapMarkerAlt className="text-yellow-400" />

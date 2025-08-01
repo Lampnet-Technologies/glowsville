@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Hero = () => {
@@ -11,7 +14,13 @@ const Hero = () => {
         priority
       />
       <div className="absolute inset-0 bg-black opacity-60 -z-10" />
-      <div className="max-w-4xl mx-auto space-y-6">
+
+      <motion.div
+        className="max-w-4xl mx-auto space-y-6"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <h1 className="text-4xl md:text-5xl font-bold leading-tight">
           Accelerating Growth & Resilience for{" "}
           <span className="text-yellow-400">African Businesses</span>
@@ -19,20 +28,25 @@ const Hero = () => {
         <p className="text-lg md:text-xl">
           Empowering MSMEs, SMEs & Mid-Sized Corporates across Nigeria & West Africa...
         </p>
-        <div className="flex flex-wrap justify-center gap-4 mt-4">
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mt-4"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           <button className="bg-yellow-400 text-black px-6 py-3 rounded font-semibold">
             Schedule a Free Consultation
           </button>
           <button className="border border-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-black transition">
             Discover Our Holistic Approach
           </button>
-        </div>
-        <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm md:text-base">
+        </motion.div>
+         <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm md:text-base">
           <div>100+ Nigerian Businesses Served</div>
           <div>35% Average Revenue Growth</div>
           <div>3 Integrated Solutions</div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
