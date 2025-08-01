@@ -6,6 +6,7 @@ import ExcellenceSection from "@/components/ExcellenceSection";
 import ServicesOverview from "@/components/ServicesOverview";
 import CaseStudySection from "@/components/CaseStudySection";
 import ContactCTA from "@/components/ContactCTA";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <ServicesOverview />
       <CaseStudySection />
       <ContactCTA />
+      <Footer />
     </>
   );
 }
