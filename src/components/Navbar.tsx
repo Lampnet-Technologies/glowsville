@@ -11,10 +11,10 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const navItems = [
-    { name: "About Us", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Case Studies", href: "#" },
-    { name: "Insights", href: "#" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Case Studies", href: "/casestudies" },
+    { name: "Insights", href: "/insights" },
   ];
 
   return (
