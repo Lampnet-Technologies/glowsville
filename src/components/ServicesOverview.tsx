@@ -1,6 +1,6 @@
 "use client";
 
-import { FaChartLine, FaRocket, FaUsers, FaLeaf, FaCogs, FaLightbulb } from "react-icons/fa";
+import { FaChartLine, FaRocket, FaUsers, FaCogs, FaLightbulb } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const ServicesOverview = () => {
