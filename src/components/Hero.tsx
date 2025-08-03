@@ -26,7 +26,8 @@ const Hero = () => {
           <span className="text-yellow-400">African Businesses</span>
         </h1>
         <p className="text-lg md:text-xl">
-          Empowering MSMEs, SMEs & Mid-Sized Corporates across Nigeria & West Africa...
+          Empowering MSMEs, SMEs & Mid-Sized Corporates across Nigeria & West
+          Africa...
         </p>
         <motion.div
           className="flex flex-wrap justify-center gap-4 mt-4"
@@ -41,10 +42,17 @@ const Hero = () => {
             Discover Our Holistic Approach
           </button>
         </motion.div>
-         <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm md:text-base">
-          <div>100+ Nigerian Businesses Served</div>
-          <div>35% Average Revenue Growth</div>
-          <div>3 Integrated Solutions</div>
+        <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm md:text-base">
+          <div>
+            <span className="text-yellow-400 flex justify-center font-bold">100+</span> Nigerian
+            Businesses Served
+          </div>
+          <div>
+            <span className="text-yellow-400 flex justify-center font-bold">35%</span> Average Revenue Growth
+          </div>
+          <div>
+            <span className="text-yellow-400 flex justify-center font-bold">3</span> Integrated Solutions
+          </div>
         </div>
       </motion.div>
     </section>

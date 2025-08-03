@@ -10,7 +10,7 @@ import SharedHero from "@/components/SharedHero";
 const servicesData = [
   {
     title: "RevOps & GTM Audit & Strategy Development",
-    image: "/assets/services/chart-1.png",
+    image: "/assets/service1.png",
     points: [
       "Comprehensive assessment of sales, marketing, and customer service infrastructure",
       "Identification of inefficiencies and untapped growth potential",
@@ -19,7 +19,7 @@ const servicesData = [
   },
   {
     title: "Process Optimization & Implementation (RevOps Focus)",
-    image: "/assets/services/chart-2.png",
+    image: "/assets/chart-laptop.png",
     points: [
       "Workflow streamlining and performance enhancements",
       "Customer lifecycle management strategies",
@@ -28,7 +28,7 @@ const servicesData = [
   },
   {
     title: "Go-to-Market (GTM) Strategy & Execution Support",
-    image: "/assets/services/chart-3.png",
+    image: "/assets/service5.png",
     points: [
       "Market Research & Analysis",
       "Product/Service Positioning & Pricing Strategy",
@@ -37,7 +37,7 @@ const servicesData = [
   },
   {
     title: "Technology Stack Optimization & Integration",
-    image: "/assets/services/chart-4.png",
+    image: "/assets/service3.png",
     points: [
       "Implementation and training on GTM technologies",
       "CRM, automation, analytics, and sales enablement tools",
@@ -46,7 +46,7 @@ const servicesData = [
   },
   {
     title: "Data Analytics & Performance Measurement",
-    image: "/assets/services/chart-5.png",
+    image: "/assets/service4.png",
     points: [
       "Setting up KPIs and dashboards",
       "Real-time data for decision-making",
@@ -55,7 +55,7 @@ const servicesData = [
   },
   {
     title: "Team Alignment & Training",
-    image: "/assets/services/chart-6.png",
+    image: "/assets/insight-hero.png",
     points: [
       "Workshops to unify teams and ensure process understanding",
       "Practical tools for RevOps and GTM adoption",
@@ -64,7 +64,7 @@ const servicesData = [
   },
   {
     title: "Informal Market Specialization",
-    image: "/assets/services/chart-7.png",
+    image: "/assets/service2.png",
     points: [
       "RevOps + GTM strategies for informal market sectors",
       "Specialized engagement and customer targeting",
@@ -73,7 +73,7 @@ const servicesData = [
   },
   {
     title: "Ongoing Support & Retainers",
-    image: "/assets/services/chart-8.png",
+    image: "/assets/service6.jpeg",
     points: [
       "Continuous optimization for RevOps and GTM initiatives",
       "Retainer model with performance monitoring and improvements",
@@ -89,16 +89,16 @@ const ServicesPage = () => {
       <SharedHero
         title="Our Services"
         subtitle="Explore how we help businesses scale with RevOps, GTM, and Business Optimization"
-        backgroundImage="/assets/hero-bg.png"
+        backgroundImage="/assets/service-hero.jpg"
       />
-  {/*     <motion.h1
-        className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+      <motion.h1
+        className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10 mt-5"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Explore Our Services
-      </motion.h1> */}
+      </motion.h1>
 
       <div className="space-y-20 px-5 pb-5 pt-5">
         {servicesData.map(({ title, image, points }, index) => (

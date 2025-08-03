@@ -38,7 +38,7 @@ export default function InsightsPage() {
       <SharedHero
         title="GloryVille Solutions Nigeria"
         subtitle="We bring you fresh and interesting news about the business and technology climate of Nigeria"
-        backgroundImage="/assets/hero-bg.png"
+        backgroundImage="/assets/insight-hero.png"
       />
 
       <section className="px-6 py-16 bg-white text-gray-600">

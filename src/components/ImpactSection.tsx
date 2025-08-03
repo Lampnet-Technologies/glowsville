@@ -20,17 +20,23 @@ const ImpactSection = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-semibold mb-4 leading-snug">
+        <h2 className="text-gray-600 text-3xl font-semibold mb-4 leading-snug">
           Your Partner for{" "}
-          <span className="text-yellow-500">Integrated Growth</span> & Sustainable Impact
+          <span className="text-yellow-500">Integrated Growth</span> &
+          Sustainable Impact
         </h2>
-        <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">
-          In Nigeria’s dynamic economy, we are the strategic partner helping Nigerian and
-          West African businesses to thrive — combining innovation, strategy, and deep
-          market understanding.
+        <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
+          In Nigeria&apos;s dynamic economy, fragmented operations and
+          inefficient market strategies can hinder even the most ambitious
+          businesses. GloryVille Solutions addresses this critical gap. We are a
+          specialized consulting firm dedicated to empowering Nigerian and West
+          African businesses to achieve sustainable growth and market dominance.
+        </p>
+        <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
+          By seamlessly integrating Business Process Management (BPM), Revenue Operations (RevOps), and Go-to-Market (GTM) strategies, we help you streamline revenue generation, formalize operations, and build a resilient foundation for scalable success.
         </p>
         <button className="bg-yellow-500 text-white px-5 py-2 rounded hover:bg-yellow-600 transition">
-          Learn About Our Impact
+          Read About Us
         </button>
       </motion.div>
 

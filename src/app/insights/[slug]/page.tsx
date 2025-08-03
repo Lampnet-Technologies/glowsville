@@ -56,7 +56,7 @@ export default async function InsightDetail({
       <SharedHero
         title={post.title}
         subtitle="Insights & Resources"
-        backgroundImage="/assets/hero-bg.png"
+        backgroundImage="/assets/insight-hero.png"
       />
 
       <section className="px-6 py-6 max-w-6xl mx-auto text-gray-600 space-y-6">

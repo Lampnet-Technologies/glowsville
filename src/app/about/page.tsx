@@ -22,7 +22,7 @@ export default function AboutPage() {
       <SharedHero
         title="GloryVille Solutions Nigeria"
         subtitle="Empowering MSMEs, SMEs & Mid-Sized Corporates across Nigeria & West Africa through integrated Business Process Management, Revenue Operations, and Go-to-Market Strategies."
-        backgroundImage="/assets/hero-bg.png"
+        backgroundImage="/assets/about-hero.png"
       />
 
       {/* Intro Section */}
@@ -46,7 +46,7 @@ export default function AboutPage() {
         </div>
         <div className="mt-8">
           <Image
-            src="/assets/about-intro.jpg"
+            src="/assets/about-hero.png"
             alt="About Us Team"
             width={800}
             height={450}
@@ -57,7 +57,7 @@ export default function AboutPage() {
 
       {/* Mission & Vision */}
       <motion.section
-        className="py-16 px-6"
+        className="py-14 px-6"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -65,7 +65,7 @@ export default function AboutPage() {
       >
         <div className="max-w-6xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
           <Image
-            src="/assets/mission-vision.jpg"
+            src="/assets/mission-vision.png"
             alt="Vision Image"
             width={600}
             height={400}
@@ -162,33 +162,6 @@ export default function AboutPage() {
               <p className="text-sm text-gray-600">{description}</p>
             </div>
           ))}
-        </div>
-      </motion.section>
-
-      {/* Team Section */}
-      <motion.section
-        className="py-20 px-6"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.7 }}
-      >
-        <div className="max-w-4xl mx-auto text-center text-gray-600">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-6">
-            Meet the Team
-          </h3>
-          <p className="mb-10">
-            We&apos;re a diverse group of strategists, operators, and
-            technologists united by a shared passion for driving impact and
-            growth across African markets.
-          </p>
-          <Image
-            src="/assets/about-team.jpg"
-            alt="Team"
-            width={800}
-            height={400}
-            className="rounded-lg shadow mx-auto"
-          />
         </div>
       </motion.section>
       <Footer />

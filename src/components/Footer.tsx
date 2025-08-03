@@ -49,22 +49,22 @@ const Footer: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/about">
                 <span>About Us</span>
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/services">
                 <span>Services</span>
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/insights">
                 <span>CaseStudies</span>
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/insights">
                 <span>Insights & Resources</span>
               </Link>
             </li>
@@ -81,17 +81,17 @@ const Footer: React.FC = () => {
           <h3 className="text-yellow-400 font-semibold mb-3">Our Services</h3>
           <ul className="space-y-2 text-gray-300">
             <li>
-              <Link href="/services/business-process">
+              <Link href="#">
                 <span>Business Process Management</span>
               </Link>
             </li>
             <li>
-              <Link href="/services/revenue-operations">
+              <Link href="#">
                 <span>Revenue Operations</span>
               </Link>
             </li>
             <li>
-              <Link href="/services/go-to-market">
+              <Link href="#">
                 <span>Go-To-Market Strategy</span>
               </Link>
             </li>
@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
             </li>
             <li className="flex items-center space-x-2">
               <FaMapMarkerAlt className="text-yellow-400" />
-              <span>[Your Office Address], Lagos, Nigeria</span>
+              <span>Plot 3, Ikeja, Lagos, Nigeria</span>
             </li>
             <li className="flex items-center space-x-2">
               <FaClock className="text-yellow-400" />
