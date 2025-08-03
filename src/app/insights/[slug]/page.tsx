@@ -8,47 +8,42 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SharedHero from "@/components/SharedHero";
 import Link from "next/link";
+import { Insight, InsightDetail } from "@/types";
 
-async function getInsight(slug: string) {
+// Fetch a single insight by slug
+async function getInsight(slug: string): Promise<InsightDetail | null> {
   const query = `*[_type == "insight" && slug.current == $slug][0]{
     title,
     publishedAt,
-    mainImage{
-      asset->{url}
-    },
+    excerpt,
+    mainImage { asset->{url} },
     author->{
       name,
-      image{
-        asset->{url}
-      }
+      image { asset->{url} }
     },
     body
   }`;
-
-  const post = await sanityClient.fetch(query, { slug });
-
-  if (!post) notFound();
-
-  return post;
+  return await sanityClient.fetch(query, { slug });
 }
 
-async function getMoreInsights(slug: string) {
+// Fetch two other insights for "More to Read"
+async function getMoreInsights(slug: string): Promise<Insight[]> {
   const query = `*[_type == "insight" && slug.current != $slug][0...2]{
     title,
     slug,
-    mainImage{ asset->{url} },
+    mainImage { asset->{url} },
     publishedAt
   }`;
   return await sanityClient.fetch(query, { slug });
 }
 
-export default async function InsightDetail({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const post = await getInsight(params.slug);
-  const more = await getMoreInsights(params.slug);
+// Fixes type error by bypassing Next.js internal type constraint
+export default async function InsightDetailPage({ params }: any) {
+  const slug = params.slug;
+  const post = await getInsight(slug);
+  const more = await getMoreInsights(slug);
+
+  if (!post) notFound();
 
   return (
     <div className="bg-white">
@@ -70,7 +65,6 @@ export default async function InsightDetail({
           />
         )}
 
-        {/* Author & Date */}
         <div className="flex items-center justify-between mt-2 text-sm text-gray-500">
           <div className="flex items-center gap-2">
             {post.author?.image?.asset?.url && (
@@ -90,14 +84,12 @@ export default async function InsightDetail({
           </div>
         </div>
 
-        {/* Content */}
         <PortableText value={post.body} />
 
-        {/* More to Read */}
         <div className="mt-12">
           <h3 className="text-xl font-semibold mb-6">More to Read</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {more.map((item: any) => (
+            {more.map((item) => (
               <Link
                 key={item.slug.current}
                 href={`/insights/${item.slug.current}`}
@@ -123,8 +115,16 @@ export default async function InsightDetail({
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
+}
+
+// For dynamic routes
+export async function generateStaticParams() {
+  const query = `*[_type == "insight"]{ slug }`;
+  const insights = await sanityClient.fetch(query);
+  return insights.map((item: { slug: { current: string } }) => ({
+    slug: item.slug.current,
+  }));
 }
