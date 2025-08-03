@@ -2,83 +2,94 @@
 "use client";
 import { useEffect, useState } from "react";
 import { sanityClient } from "@/lib/sanity.client";
-import { PortableText } from "@portabletext/react";
 import { motion } from "framer-motion";
 import SharedHero from "@/components/SharedHero";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import Link from "next/link";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function InsightsPage() {
   const [insights, setInsights] = useState<any[]>([]);
-  const [selected, setSelected] = useState<any>(null);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   useEffect(() => {
-    sanityClient.fetch(`*[_type == "insight"]`).then(setInsights);
+    sanityClient
+      .fetch(
+        `*[_type == "insight"] | order(publishedAt desc){
+          _id,
+          title,
+          slug,
+          mainImage{
+            asset->{url}
+          },
+          excerpt,
+          publishedAt
+        }`
+      )
+      .then(setInsights);
   }, []);
 
   return (
     <>
       <Navbar />
-       <SharedHero
+      <SharedHero
         title="GloryVille Solutions Nigeria"
         subtitle="We bring you fresh and interesting news about the business and technology climate of Nigeria"
         backgroundImage="/assets/hero-bg.png"
       />
+
       <section className="px-6 py-16 bg-white text-gray-600">
-        <h2 className="text-center text-3xl font-bold mb-10">
+        <h2 className="text-center text-3xl font-bold mb-5">
           Insights & Resources
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {insights.map((insight) => (
+          {insights.slice(0, visibleCount).map((insight) => (
             <motion.div
               key={insight._id}
-              className="border p-4 rounded shadow hover:shadow-md cursor-pointer bg-white"
-              onClick={() => setSelected(insight)}
+              className="border p-4 rounded shadow hover:shadow-md bg-white"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
             >
-              {insight.mainImage?.asset?.url && (
-                <Image
-                  src={insight.mainImage.asset.url}
-                  alt={insight.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-48 object-cover rounded mb-4"
-                />
-              )}
-              <h4 className="text-lg font-semibold">{insight.title}</h4>
-              <p className="text-sm text-gray-600">{insight.excerpt}</p>
-              <p className="text-xs text-gray-500 mt-2">
-                {new Date(insight.publishedAt).toDateString()}
-              </p>
+              <Link href={`/insights/${insight.slug.current}`}>
+                {insight.mainImage?.asset?.url && (
+                  <Image
+                    src={insight.mainImage.asset.url}
+                    alt={insight.title}
+                    width={500}
+                    height={300}
+                    className="w-full h-48 object-cover rounded mb-4"
+                  />
+                )}
+                <h4 className="text-xl font-semibold mb-1">{insight.title}</h4>
+                <p className="text-sm text-gray-600 mb-2">{insight.excerpt}</p>
+                <p className="flex items-center gap-1 text-xs text-gray-500">
+                  <FaRegCalendarAlt />
+                  {new Date(insight.publishedAt).toDateString()}
+                </p>
+              </Link>
             </motion.div>
           ))}
-        </div>
-
-        {/* Modal */}
-        {selected && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-6">
-            <div className="bg-white p-6 max-w-3xl w-full rounded shadow-lg overflow-y-auto max-h-[90vh] relative">
+          {visibleCount < insights.length && (
+            <div className="text-center mt-8 flex justify-center">
               <button
-                className="absolute top-3 right-4 text-2xl"
-                onClick={() => setSelected(null)}
+                className="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition"
+                onClick={() => setVisibleCount((prev) => prev + 4)}
               >
-                &times;
+                See More
               </button>
-              <h3 className="text-2xl font-bold mb-2">{selected.title}</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                {new Date(selected.publishedAt).toDateString()}
-              </p>
-              <PortableText value={selected.body} />
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </section>
+
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
