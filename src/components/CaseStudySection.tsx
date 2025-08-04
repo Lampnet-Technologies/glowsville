@@ -225,7 +225,7 @@ const CaseStudySection = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <Link href="#" target="-blank" rel="noopener noreferrer">
+        <Link href="https://calendly.com/gloryvillesolutions/30min" target="-blank" rel="noopener noreferrer">
         <button className="bg-yellow-500 text-white px-6 py-2 rounded font-medium hover:bg-yellow-600">
           Get Free Consultation
         </button>

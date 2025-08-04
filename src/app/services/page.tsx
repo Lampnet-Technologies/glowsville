@@ -140,7 +140,7 @@ const ServicesPage = () => {
                   </li>
                 ))}
               </ul>
-              <Link href="#" target="_blank" rel="noopener noreferrer">
+              <Link href="https://calendly.com/gloryvillesolutions/30min" target="_blank" rel="noopener noreferrer">
                 <button className="mt-4 bg-yellow-500 text-white px-5 py-2 rounded hover:bg-yellow-600 transition">
                   Get Free Consultation
                 </button>

@@ -36,7 +36,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <Link href="#" target="-blank" rel="noopener noreferrer">
+          <Link href="https://calendly.com/gloryvillesolutions/30min" target="-blank" rel="noopener noreferrer">
           <button className="bg-yellow-400 text-black px-6 py-3 rounded font-semibold">
             Schedule a Free Consultation
           </button>

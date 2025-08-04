@@ -46,7 +46,7 @@ const Navbar = () => {
 
         {/* Contact Button */}
         <div className="hidden md:block">
-          <Link href="#" target="-blank" rel="noopener noreferrer">
+          <Link href="https://calendly.com/gloryvillesolutions/30min" target="-blank" rel="noopener noreferrer">
             <button className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition text-sm">
               Get Free Consultation
             </button>
@@ -76,9 +76,11 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
+          <Link href="https://calendly.com/gloryvillesolutions/30min" target="_blank" rel="noopener noreferrer">
           <button className="w-full bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600 transition">
-            Contact Us
+            Get Free Consultation
           </button>
+          </Link>
         </div>
       )}
     </header>
