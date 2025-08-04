@@ -12,6 +12,7 @@ import {
   FaMarker,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const bottomBenefits = [
   {
@@ -87,7 +88,7 @@ const CaseStudySection = () => {
     >
       {/* Bottom 4 Benefits */}
       <motion.div
-        className="text-center mb-4"
+        className="text-center mb-4 p-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -154,11 +155,11 @@ const CaseStudySection = () => {
       </motion.p>
 
       {/* Case Study Cards */}
-      <div className="grid md:grid-cols-3 gap-6 mb-14">
+      <div className="grid md:grid-cols-3 gap-6 mb-14 p-8">
         {caseStudies.map(({ icon, title, result, note }, i) => (
           <motion.div
             key={i}
-            className="bg-white rounded-lg shadow p-6 space-y-3"
+            className="bg-white hover:bg-yellow-100 rounded-lg shadow p-6 space-y-3"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.2 }}
@@ -198,11 +199,11 @@ const CaseStudySection = () => {
       </motion.p>
 
       {/* Insight List */}
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
+      <div className="grid md:grid-cols-3 gap-6 mb-8 p-8">
         {insights.map(({ icon, title, note }, i) => (
           <motion.div
             key={i}
-            className="bg-white p-4 rounded shadow text-left text-sm"
+            className="bg-white p-4 rounded shadow text-left text-sm hover:bg-yellow-100"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: i * 0.15 }}
@@ -224,12 +225,16 @@ const CaseStudySection = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
+        <Link href="#" target="-blank" rel="noopener noreferrer">
         <button className="bg-yellow-500 text-white px-6 py-2 rounded font-medium hover:bg-yellow-600">
           Get Free Consultation
         </button>
+        </Link>
+        <Link href="/insights">
         <button className="border border-yellow-500 text-yellow-500 px-6 py-2 rounded font-medium hover:bg-yellow-100">
           Visit Our Insights Hub
         </button>
+        </Link>
       </motion.div>
     </motion.section>
   );

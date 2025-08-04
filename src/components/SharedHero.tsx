@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 
 type HeroProps = {
-  title: string;
+  title: React.ReactNode;
   subtitle?: string;
   backgroundImage?: string;
 };

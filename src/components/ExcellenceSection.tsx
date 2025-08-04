@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaChartLine, FaRocket, FaCogs } from "react-icons/fa";
 
@@ -92,9 +92,11 @@ const ExcellenceSection = () => {
                   <li key={idx}>{p}</li>
                 ))}
               </ul>
+              <Link href="/services">
               <span className="text-yellow-500 text-sm font-medium cursor-pointer">
                 Learn More →
               </span>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -107,9 +109,11 @@ const ExcellenceSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
+          <Link href="/services">
           <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-6 rounded transition">
             View All Services
           </button>
+          </Link>
         </motion.div>
       </motion.section>
     </motion.section>

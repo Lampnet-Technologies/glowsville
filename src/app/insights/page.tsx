@@ -36,15 +36,40 @@ export default function InsightsPage() {
     <>
       <Navbar />
       <SharedHero
-        title="GloryVille Solutions Nigeria"
+        title={
+          <>
+            GloryVille <span className="text-yellow-500">Solutions</span>{" "}
+            Nigeria
+          </>
+        }
         subtitle="We bring you fresh and interesting news about the business and technology climate of Nigeria"
         backgroundImage="/assets/insight-hero.png"
       />
 
       <section className="px-6 py-16 bg-white text-gray-600">
-        <h2 className="text-center text-3xl font-bold mb-5">
-          Insights & Resources
-        </h2>
+        {/* Intro Section */}
+        <motion.section
+          className="py-16 px-6 max-w-6xl mx-auto text-center pt-1"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-gray-600">
+            <h2 className="text-center text-3xl font-bold mb-5">
+              Insights & Resources
+            </h2>
+            <p className="leading-relaxed">
+              <strong>Stay informed, inspired, and empowered.</strong> Our
+              Insights & Resources section is designed to equip entrepreneurs,
+              business leaders, and teams with practical knowledge, industry
+              trends, and strategic perspectives. Whether you&apos;re exploring
+              growth opportunities or optimizing existing operations,
+              you&apos;ll find valuable content to guide your journey and fuel
+              informed decision-making.
+            </p>
+          </div>
+        </motion.section>
 
         <div className="grid md:grid-cols-2 gap-8">
           {insights.slice(0, visibleCount).map((insight) => (

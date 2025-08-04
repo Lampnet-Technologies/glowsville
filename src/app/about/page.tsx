@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -20,7 +21,12 @@ export default function AboutPage() {
       <Navbar />
       {/* Hero Section */}
       <SharedHero
-        title="GloryVille Solutions Nigeria"
+        title={
+          <>
+            GloryVille <span className="text-yellow-500">Solutions</span>{" "}
+            Nigeria
+          </>
+        }
         subtitle="Empowering MSMEs, SMEs & Mid-Sized Corporates across Nigeria & West Africa through integrated Business Process Management, Revenue Operations, and Go-to-Market Strategies."
         backgroundImage="/assets/about-hero.png"
       />
@@ -54,6 +60,45 @@ export default function AboutPage() {
           />
         </div>
       </motion.section>
+
+      {/* Success Story */}
+      <motion.div
+        id="success-stories"
+        className="py-16 px-6 max-w-5xl mx-auto text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-600 mb-6">
+          Empowering Local Businesses to Scale Globally
+        </h2>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          In 2023, GloryVille Solutions partnered with{" "}
+          <strong>SwiftMove Logistics</strong>, a mid-sized delivery company in
+          West Africa. Facing delays and lacking direction, we implemented a
+          custom <strong>RevOps</strong> and <strong>GTM</strong> framework
+          tailored to their structure.
+        </p>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          Within six months, they reduced process waste by <strong>35%</strong>,
+          doubled client retention, expanded into{" "}
+          <strong>3 international markets</strong>, and achieved a
+          <strong> 2.5x increase in monthly revenue</strong>. With better
+          systems, stronger teams, and a clearer strategy, SwiftMove now thrives
+          with our ongoing support.
+        </p>
+
+        <Link href="/#casestudy">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="mt-4 bg-yellow-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-yellow-600 transition"
+          >
+            See Full Case Study
+          </motion.button>
+        </Link>
+      </motion.div>
 
       {/* Mission & Vision */}
       <motion.section

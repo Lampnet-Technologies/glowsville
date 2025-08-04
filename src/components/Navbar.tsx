@@ -13,7 +13,7 @@ const Navbar = () => {
   const navItems = [
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Case Studies", href: "/casestudies" },
+    { name: "Case Studies", href: "/#casestudy" },
     { name: "Insights", href: "/insights" },
   ];
 
@@ -46,9 +46,11 @@ const Navbar = () => {
 
         {/* Contact Button */}
         <div className="hidden md:block">
-          <button className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition text-sm">
-            Contact Us
-          </button>
+          <Link href="#" target="-blank" rel="noopener noreferrer">
+            <button className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition text-sm">
+              Get Free Consultation
+            </button>
+          </Link>
         </div>
 
         {/* Hamburger Icon */}

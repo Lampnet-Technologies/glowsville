@@ -17,7 +17,9 @@ export default function HomePage() {
       <ImpactSection />
       <ExcellenceSection />
       <ServicesOverview />
+      <section id="casestudy">
       <CaseStudySection />
+      </section>
       <ContactCTA />
       <Footer />
       <ScrollToTopButton />

@@ -6,6 +6,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SharedHero from "@/components/SharedHero";
+import Link from "next/link";
 
 const servicesData = [
   {
@@ -87,12 +88,17 @@ const ServicesPage = () => {
     <main className="bg-white">
       <Navbar />
       <SharedHero
-        title="Our Services"
+        title={
+          <>
+            GloryVille <span className="text-yellow-500">Solutions</span>{" "}
+            Nigeria
+          </>
+        }
         subtitle="Explore how we help businesses scale with RevOps, GTM, and Business Optimization"
         backgroundImage="/assets/service-hero.jpg"
       />
       <motion.h1
-        className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10 mt-5"
+        className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10 mt-5 pt-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -104,6 +110,7 @@ const ServicesPage = () => {
         {servicesData.map(({ title, image, points }, index) => (
           <motion.div
             key={index}
+            id={title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}
             className={`flex flex-col md:flex-row ${
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             } items-center gap-10`}
@@ -133,9 +140,11 @@ const ServicesPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className="mt-4 bg-yellow-500 text-white px-5 py-2 rounded hover:bg-yellow-600 transition">
-                Get Free Consultation
-              </button>
+              <Link href="#" target="_blank" rel="noopener noreferrer">
+                <button className="mt-4 bg-yellow-500 text-white px-5 py-2 rounded hover:bg-yellow-600 transition">
+                  Get Free Consultation
+                </button>
+              </Link>
             </div>
           </motion.div>
         ))}

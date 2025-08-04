@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ImpactSection = () => {
   return (
     <motion.section
-      className="py-16 px-6 bg-white flex flex-col-reverse md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto"
+      className="py-16 px-6 bg-white flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full mx-auto"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -35,9 +36,11 @@ const ImpactSection = () => {
         <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
           By seamlessly integrating Business Process Management (BPM), Revenue Operations (RevOps), and Go-to-Market (GTM) strategies, we help you streamline revenue generation, formalize operations, and build a resilient foundation for scalable success.
         </p>
+        <Link href="/about">
         <button className="bg-yellow-500 text-white px-5 py-2 rounded hover:bg-yellow-600 transition">
           Read About Us
         </button>
+        </Link>
       </motion.div>
 
       {/* Image content */}
