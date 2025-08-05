@@ -15,7 +15,9 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <ImpactSection />
+      <section id="service">
       <ExcellenceSection />
+      </section>
       <ServicesOverview />
       <section id="casestudy">
       <CaseStudySection />
