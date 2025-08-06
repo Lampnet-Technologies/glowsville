@@ -25,3 +25,20 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-logos {
+  -webkit-animation: scroll 15s linear infinite;
+  animation: scroll 15s linear infinite;
+}
+
+.scroll-logos:hover {
+  animation-play-state: paused;
+}

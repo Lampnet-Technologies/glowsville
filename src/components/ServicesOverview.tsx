@@ -28,7 +28,7 @@ const ServicesOverview = () => {
       <div className="grid md:grid-cols-2 gap-6 mb-5 px-8 py-6 justify-center">
         <div className="w-full max-w-sm mx-auto space-y-4">
           <motion.div
-            className="bg-yellow-400 text-white rounded-lg p-6 shadow space-y-4"
+            className="bg-yellow-400 text-white rounded-lg p-6 space-y-4"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
