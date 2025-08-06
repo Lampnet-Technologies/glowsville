@@ -8,6 +8,7 @@ import CaseStudySection from "@/components/CaseStudySection";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ClientsSection from "@/components/ClientsSection";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
       <CaseStudySection />
       </section>
       <ContactCTA />
+      <ClientsSection />
       <Footer />
       <ScrollToTopButton />
     </>

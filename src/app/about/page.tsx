@@ -128,9 +128,7 @@ export default function AboutPage() {
             <div>
               <h3 className="text-xl font-bold mb-1">Our Vision</h3>
               <p>
-                To be the leading GTM and RevOps consulting firm in Nigeria,
-                recognized for delivering sustainable impact, innovation, and
-                measurable results.
+                To be the leading BPM, RevOps & GTM consulting firm in Nigeria and global emerging markets, recognized for delivering sustainable impact, innovation, and measurable results.
               </p>
             </div>
           </div>

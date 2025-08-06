@@ -18,7 +18,7 @@ const bottomBenefits = [
   {
     icon: <FaCogs size={22} className="text-yellow-500 mx-auto" />,
     label: "Integrated Specialization",
-    desc: "Our unique focus on the convergence o BPM. RevOps and GiM provides a holiste solution that competitors often separate.",
+    desc: "Our unique focus on the convergence o BPM. RevOps and GTM provides a holiste solution that competitors often separate.",
   },
   {
     icon: <FaUsers size={22} className="text-yellow-500 mx-auto" />,
