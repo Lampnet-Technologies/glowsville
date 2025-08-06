@@ -5,7 +5,7 @@ import { FaChartBar, FaFeather } from "react-icons/fa";
 
 const ServicesOverview = () => {
   return (
-    <section className="px-6 py-16 bg-white">
+    <section className="px-6 py-16 bg-white overflow-hidden order border-transparent">
       {/* EconomicMobility & Climate Resilience text */}
       <motion.div
         className="text-center mb-10"

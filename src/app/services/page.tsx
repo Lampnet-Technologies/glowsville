@@ -106,7 +106,7 @@ const ServicesPage = () => {
         Explore Our Services
       </motion.h1>
 
-      <div className="space-y-20 px-5 pb-5 pt-5">
+      <div className="space-y-20 px-5 pb-5 pt-5 mb-10">
         {servicesData.map(({ title, image, points }, index) => (
           <motion.div
             key={index}
