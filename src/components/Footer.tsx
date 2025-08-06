@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <Image
             src="/assets/Logo.png"
             alt="GloryVille Logo"
-            width={55}
+            width={60}
             height={20}
             className="h-12 mb-4"
           />

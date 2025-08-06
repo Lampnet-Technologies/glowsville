@@ -29,7 +29,7 @@ const ClientsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-2xl md:text-3xl font-bold text-gray-600 mb-8"
         >
-          Those We&apos;ve Worked With
+          Clients & Partners We Served
         </motion.h2>
 
         <motion.div

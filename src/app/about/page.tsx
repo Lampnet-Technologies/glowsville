@@ -14,6 +14,7 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import ClientsSection from "@/components/ClientsSection";
 
 export default function AboutPage() {
   return (
@@ -207,6 +208,7 @@ export default function AboutPage() {
           ))}
         </div>
       </motion.section>
+      <ClientsSection />
       <Footer />
     </main>
   );
