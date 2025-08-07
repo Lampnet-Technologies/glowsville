@@ -18,7 +18,7 @@ const bottomBenefits = [
   {
     icon: <FaCogs size={22} className="text-yellow-500 mx-auto" />,
     label: "Integrated Specialization",
-    desc: "Our unique focus on the convergence o BPM. RevOps and GTM provides a holiste solution that competitors often separate.",
+    desc: "Our unique focus on the convergence to BPM. RevOps and GTM provides a holistic solution that competitors often separate.",
   },
   {
     icon: <FaUsers size={22} className="text-yellow-500 mx-auto" />,
@@ -54,7 +54,7 @@ const caseStudies = [
     icon: <FaWallet className="text-yellow-500" />,
     title: "FinTech Startup",
     result: "200% Revenue • $2M Series A",
-    note: "Scaled from startup to market leader with 200% revenve growth and succesful Series A funding",
+    note: "Scaled the company from early-stage to industry leader with 200% revenue growth and a successful Series A raise.",
   },
 ];
 

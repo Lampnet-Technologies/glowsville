@@ -17,7 +17,7 @@ const ExcellenceSection = () => {
     },
     {
       title: "Unify & Accelerate Your Revenue",
-      text: "We strategically align your sales, marketing, and customer service functlons-uniting processes, data, and technology to create a powerful, predictable revenue engine.",
+      text: "We strategically align your sales, marketing, and customer service functions-uniting processes, data, and ",
       points: [
         "Sales Alignment",
         "Marketing Integration",

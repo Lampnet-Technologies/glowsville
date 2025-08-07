@@ -15,9 +15,7 @@ const ContactCTA = () => {
         Ready to Scale Sustainably? Let&apos;s Talk.
       </h2>
       <p className="max-w-2xl mx-auto mb-8">
-        Whether you&apos;re an MsME, SME, or Mid-Sized Corporate in Nigeria or
-        West Africa, we&apos;re here to help you optimize your processes,
-        supercharge your revenue, and expand your market with resilience.
+        Whether you are an MsME, SME, or Mid-Sized Corporate in Nigeria or West Africa, we are here to help you optimize your processes, supercharge your revenue, and expand your market with resilience.
       </p>
       <div className="flex flex-col md:flex-row justify-center gap-4 mb-10">
         <Link href="https://calendly.com/gloryvillesolutions/30min" target="_blank" rel="noopener noreferrer">
