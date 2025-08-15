@@ -23,7 +23,7 @@ const bottomBenefits = [
   {
     icon: <FaUsers size={22} className="text-yellow-500 mx-auto" />,
     label: "Deep African Contextualization",
-    desc: "We have a deep and unique understanding of the business environment in Nigeria and West Africa.",
+    desc: "We have a deep and unique understanding of the business environment in Nigeria and Sub-Saharan Africa.",
   },
   {
     icon: <FaChartLine size={22} className="text-yellow-500 mx-auto" />,

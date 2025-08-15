@@ -17,7 +17,7 @@ const ExcellenceSection = () => {
     },
     {
       title: "Unify & Accelerate Your Revenue",
-      text: "We strategically align your sales, marketing, and customer service functions-uniting processes, data, and ",
+      text: "We strategically align your sales, marketing, and customer service functions-uniting processes, data, and teams to create a seamless customer journey that drives revenue growth and enhances customer satisfaction.",
       points: [
         "Sales Alignment",
         "Marketing Integration",
@@ -27,7 +27,7 @@ const ExcellenceSection = () => {
     },
     {
       title: "Conquer Your Market",
-      text: "From market research to launch planning. We craft and execute winning strategies that define your positioning, optimize your channels, and ensure successful market entry and expansion",
+      text: "From market research to launch planning, we craft and execute winning strategies that define your positioning, optimize your channels, and ensure successful market entry and expansion",
       points: ["Market Research", "Strategic Positioning", "Launch Planning"],
       icon: <FaRocket size={24} className="text-yellow-500" />,
     },
