@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SharedHero from "@/components/SharedHero";
 import Link from "next/link";
 import { Insight, InsightDetail } from "@/types";
+import { portableTextComponents } from "@/components/PortableTextComponents";
 
 // Fetch a single insight by slug
 async function getInsight(slug: string): Promise<InsightDetail | null> {
@@ -43,7 +44,10 @@ export default async function InsightDetailPage({ params }: any) {
   const post = await getInsight(slug);
   const more = await getMoreInsights(slug);
 
-  if (!post) notFound();
+  // Return 404 page if post not found
+  if (!post) {
+    notFound();
+  }
 
   return (
     <div className="bg-white">
@@ -84,7 +88,10 @@ export default async function InsightDetailPage({ params }: any) {
           </div>
         </div>
 
-        <PortableText value={post.body} />
+        <PortableText
+          value={post.body}
+          components={portableTextComponents}
+        />
 
         <div className="mt-12">
           <h3 className="text-xl font-semibold mb-6">More to Read</h3>
